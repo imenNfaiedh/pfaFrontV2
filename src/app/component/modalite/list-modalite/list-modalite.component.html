@@ -1,0 +1,69 @@
+<div class="content-wrapper container-xxl p-0">
+  <div class="content-body">
+    <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header>--> 
+
+    <div class="row" id="basic-table">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header"><h4 class="card-title"><h1>{{title}}</h1></h4></div>
+          <div class="card-body">
+            <div class="row">
+
+              <!-- bouton ajouter -->
+              <div class="col-12 mb-50">
+                <button class="btn btn-primary ml-1"   rippleEffect [routerLink]="['/addmodalite']">
+                  <i data-feather="plus" class="mr-0 mr-sm-1"></i
+                  ><span class="d-none d-sm-inline-block"  >Ajouter</span>
+                </button>
+    
+              </div>
+
+            </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID Modalite</th>
+                    <th>Nom Complet Modalite</th>
+                    <th>Montant MIN</th>
+                    <th>Montant Max</th>
+                    <th>Type Modalité</th>
+
+                    <th> Fond</th>
+
+                    
+                    <th>Actions</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of modalites ">
+                    <td>{{item.idModalite}}</td>
+                    <td>{{item.nomCompletModalite}}</td>
+                    <td>{{item.montantMin}}</td>
+                    <td>{{item.montantMax}}</td>
+                    <td>{{item.typeModalite}}</td>
+                    <td>{{item.nameFond}}</td>
+                    
+                    <td>
+                      <a class="btn btn-sm btn-info text-white"   (click) = update(item.idModalite)>
+                        <i class="fa fa-pencil-square-o"  ></i></a>
+                    <a class="btn btn-sm btn-danger text-white ml-1"  (click) =  delete(item.idModalite)>
+                        <i class="fa fa-trash-o"  ></i></a>
+                    </td>
+
+                          
+              </tr>
+
+  
+                    
+    
+                    
+                       
+                        
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

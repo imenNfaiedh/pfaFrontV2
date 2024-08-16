@@ -1,0 +1,48 @@
+<form [formGroup]="partenaireForm" (ngSubmit)="addPartenaire()">
+  <div class="row mb-3">
+    <div class="col-sm-3 col-form-label">
+      <label for="nomPartenaire">Nom Partenaire</label>
+    </div>
+    <div class="col-sm-9">
+      <input type="text" id="nomPartenaire" class="form-control" formControlName="nomPartenaire" />
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-sm-3 col-form-label">
+      <label for="email">E-mail</label>
+    </div>
+    <div class="col-sm-9">
+      <input type="email" id="email" class="form-control" formControlName="mail" />
+    </div>
+  </div>
+<!--
+  <div class="row mb-3">
+    <div class="col-sm-3 col-form-label">
+      <label for="bank">Bank</label>
+    </div>
+    <div class="col-sm-9">
+      <select id="bank" class="form-control" formControlName="bank">
+        <option>BH Bank</option>
+        <option>Etijari Bank</option>
+        <option>Zitouna Bank</option>
+      </select>
+    </div>
+  </div>-->
+
+  <div *ngIf="mode === 'update'" class="row mb-3">
+    <div class="col-sm-3 col-form-label">
+      <label>Ajouter Convention</label>
+    </div>
+    <div class="col-sm-9">
+      <button class="btn btn-icon btn-primary" type="button" (click)="addConvention()"> + </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-9 offset-sm-3">
+      <button type="submit" rippleEffect class="btn btn-relief-success mr-1">{{ mode === 'add' ? 'Ajouter' : 'Modifier' }}</button>
+      <button type="reset" rippleEffect class="btn btn-outline-danger">Annuler</button>
+    </div>
+  </div>
+</form>

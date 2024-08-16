@@ -1,0 +1,74 @@
+<form [formGroup]="fondForm">
+    <div class="modal-footer">
+      <button type="button" class="close-button btn-danger" (click)="close()">X</button>
+    </div>
+  
+    <div class="modal-body">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="form-group row">
+            <div class="col-sm-3 col-form-label">
+              <label>Nom Complet Fond</label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" formControlName="nomCompletFond" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group row">
+            <div class="col-sm-3 col-form-label">
+              <label>Montant Max</label>
+            </div>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" formControlName="montantMax" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group row">
+            <div class="col-sm-3 col-form-label">
+              <label>Montant Min</label>
+            </div>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" formControlName="montantMin" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group row">
+            <div class="col-sm-3 col-form-label">
+              <label>Date Démarrage</label>
+            </div>
+            <div class="col-sm-9">
+              <input type="date" class="form-control" formControlName="dateDemarrageFond" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group row">
+            <div class="col-sm-3 col-form-label">
+              <label>Date Clôture</label>
+            </div>
+            <div class="col-sm-9">
+              <input type="date" class="form-control" formControlName="dateClotureFond" />
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Buttons -->
+    <div class="col-sm-9 offset-sm-3" *ngIf="!modeView">
+
+    <div class="modal-footer">
+      <div class="col-sm-9 offset-sm-3">
+        <button type="submit" rippleEffect class="btn btn-relief-success mr-1">
+          {{ mode === 'add' ? 'Ajouter' : 'Modifier' }}
+        </button>
+        <button type="reset" rippleEffect class="btn btn-outline-danger">Annuler</button>
+      </div>
+    </div>
+    </div>
+  </form>
+  

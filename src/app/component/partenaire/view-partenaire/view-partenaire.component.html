@@ -1,0 +1,50 @@
+
+<div class="modal-footer">
+  <button type="button" class="close-button btn-danger" (click)="close()">X</button>
+</div> 
+<div  >
+    <div class="partenaire-details card">
+      <h2>Détails du Partenaire</h2>
+      <div class="detail-item">
+        <strong>ID:</strong> <span>{{ partenaireId}}</span>
+      </div>
+      <div class="detail-item">
+        <strong>Nom:</strong> <span>{{ partenaire.nomPartenaire }}</span>
+      </div>
+      <div class="detail-item">
+        <strong>Email:</strong> <span>{{ partenaire.mail }}</span>
+      </div>
+      <!-- Ajoutez d'autres attributs du partenaire ici -->
+    </div>
+  </div>
+
+ 
+
+  <div  >
+    <div class="conventions-card card">
+      <h2>Conventions pour le Partenaire {{ partenaireId }}</h2>
+      <table class="conventions-table">
+        <thead>
+          <tr>
+            
+            <th>Date de Signature</th>
+            <th>Modalité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let convention of conventions">
+            
+            <td>{{ convention.sigantureDate | date:'dd/MM/yyyy' }}</td>
+            <td>{{ convention.nameModalite }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- <ng-template #noConventions>
+    <div class="no-conventions">
+      <p>Erreur</p>
+    </div>
+  </ng-template> -->
+  

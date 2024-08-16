@@ -1,0 +1,59 @@
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f5f5f5; /* Light background color */
+}
+
+.auth-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Center items vertically */
+}
+
+.card {
+    background: #fff;
+    padding: 2rem; /* Adjusted padding for better spacing */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    max-width: 500px; /* Maximum width of the card */
+    width: 100%; /* Ensure it uses full width up to max-width */
+}
+
+.card-body {
+    padding: 2rem; /* Added padding for spacing inside the card */
+}
+
+.auth-register-form {
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Increased spacing between form fields */
+}
+
+.form-control {
+    padding: 1rem; /* Increased padding inside input fields */
+    font-size: 1rem; /* Font size for better readability */
+}
+
+.btn-primary {
+    padding: 1rem; /* Increased padding for the button */
+    font-size: 1rem; /* Font size for the button */
+}
+
+.text-center {
+    margin-top: 1.5rem; /* Increased margin-top for better spacing */
+}
+
+.text-center a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Font size for the link */
+}
+
+.text-center a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

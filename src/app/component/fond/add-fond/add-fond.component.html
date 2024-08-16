@@ -1,0 +1,110 @@
+
+<form  [formGroup]="fondForm"  (ngSubmit)="addFond()">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group row">
+        <!--<div class="col-sm-3 col-form-label">
+           <label>ID Fond</label>
+          </div>
+          <div class="col-sm-9">
+            <input type="text"  class="form-control" formControlName="idFond"  />
+          </div>-->
+        </div>
+      </div> 
+      <!--
+      <div class="modal-footer"  >
+        <button type="button" rippleEffect class="btn btn-danger" id="button"  (click)="close()">X</button>
+      </div>-->
+      
+      
+      
+
+      <div class="col-12">
+        <div class="form-group row">
+          <div class="col-sm-3 col-form-label">
+            <label>Nom Complet Fond</label>
+          </div>
+          <div class="col-sm-9">
+            <input type="text"  class="form-control" formControlName="nomCompletFond"  />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group row">
+          <div class="col-sm-3 col-form-label">
+            <label>Montant Max</label>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="number"
+              
+              class="form-control"
+              formControlName="montantMax"
+              
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group row">
+          <div class="col-sm-3 col-form-label">
+            <label>Montant Min</label>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="number"
+              
+              class="form-control"
+              formControlName="montantMin"
+              
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-group row">
+          <div class="col-sm-3 col-form-label">
+            <label>Date Démarrage</label>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="date"
+              
+              class="form-control"
+              formControlName="dateDemarrageFond"
+              
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-group row">
+          <div class="col-sm-3 col-form-label">
+            <label>Date cloture</label>
+          </div>
+          <div class="col-sm-9">
+            <input
+              type="date"
+              
+              class="form-control"
+              formControlName="dateClotureFond"
+              
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- *ngIf="!modeView c est pour que les btn seulement disable dans le modeview-->
+      <div class="col-sm-9 offset-sm-3" *ngIf="!modeView">
+        <button type="submit" rippleEffect class="btn btn-relief-success mr-1">
+          {{ mode === 'add' ? 'Ajouter' : 'Modifier' }}
+        </button>
+        <button type="reset" rippleEffect class="btn btn-outline-danger">Annuler</button>
+      </div>
+
+
+    </div>
+  </form>
+    

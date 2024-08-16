@@ -1,0 +1,102 @@
+<form  [formGroup]="modaliteForm"  (ngSubmit)="addModalite()">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group row">
+        </div>
+    </div> 
+    <div class="col-12">
+      <div class="form-group row">
+        <div class="col-sm-3 col-form-label">
+          <label>Nom Complet Modalite</label>
+        </div>
+        <div class="col-sm-9">
+          <input type="text"  class="form-control" formControlName="nomCompletModalite"  />
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group row">
+        <div class="col-sm-3 col-form-label">
+          <label>Montant Max</label>
+        </div>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            
+            class="form-control"
+            formControlName="montantMax"
+            
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group row">
+        <div class="col-sm-3 col-form-label">
+          <label>Montant Min</label>
+        </div>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            
+            class="form-control"
+            formControlName="montantMin"
+            
+          />
+        </div>
+      </div>
+    </div>
+   
+
+
+    <div class="col-12 mb-3">
+      <div class="form-group row">
+        <div class="col-sm-3 col-form-label">
+        <label >Liste des Fonds</label>
+      </div>
+      <div class="col-sm-9">
+        <select
+          id="listFonds"
+          formControlName="fondId"
+          class="form-control"
+          
+        >
+          <option *ngFor="let fond of fondList" [value] ="fond.idFond" >
+            {{ fond.nomCompletFond }}
+          </option>
+        </select>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-12 mb-3">
+      <div class="form-group row">
+        <div class="col-sm-3 col-form-label">
+        <label for="basicSelect">Type Modalité</label></div>
+        <div  class="col-sm-9">
+        <select class="form-control" id="basicSelect" class="form-control"
+        formControlName="typeModalite">
+          <option>GPP</option>
+          <option>DECLARATIVE_AF</option>
+          <option>DECLARATIVE_AP</option>
+        </select>
+        
+      </div>
+      </div>
+      </div>
+
+   
+
+
+   
+
+
+   
+
+
+    <div class="col-sm-9 offset-sm-3">
+        <button type="submit" rippleEffect class="btn btn-relief-success mr-1">{{ mode === 'add' ? 'Ajouter' : ' Modifier' }}</button>
+        <button type="reset" rippleEffect class="btn btn-outline-danger">Annuler</button>
+      </div>
+    </div>
+  </form>

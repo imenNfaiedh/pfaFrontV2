@@ -1,0 +1,31 @@
+<form [formGroup]="conventionForm" (ngSubmit)="addConvention()">
+  <div class="modal-footer">
+    <button type="button" class="close-button btn-danger" (click)="close()">X</button>
+  </div>
+
+  <div class="modal-body">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Date Signature</label>
+      <div class="col-sm-9">
+        <input type="date" class="form-control" formControlName="sigantureDate" />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Liste des modalités</label>
+      <div class="col-sm-9">
+        <select formControlName="modaliteId" class="form-control">
+          <option *ngFor="let modalite of modaliteList" [value]="modalite.idModalite">
+            {{ modalite.nomCompletModalite }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer justify-content-end">
+    <button type="submit" rippleEffect class="btn btn-outline-primary">Ajouter</button>
+    <button type="reset" rippleEffect class="btn btn-outline-danger">Annuler</button>
+
+  </div>
+</form>
