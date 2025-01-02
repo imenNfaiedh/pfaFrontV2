@@ -27,7 +27,7 @@
                     <th>ID Demande</th>
                     <th>Nom Demande</th>
                     <th>ID Partenaire</th>
-                    <th>ID Modalite</th>
+                    <th>ID Modalite </th>
                     
                     <th>Actions</th>
                     
@@ -39,10 +39,14 @@
                     <td>{{item.idDemande}}</td>
                     <td>{{item.nameDemande}}</td>
 
-                    <td>{{item.idModalite}}</td>
                     <td>{{item.idPartenaire}}</td>
+                    <td>{{item.idModalite}}</td>
+                    <td>
+                      <button type="button" class="btn btn-warning" 
+                       (click)="verifyDemande(item.idDemande)">Vérifier</button>
+                    </td>
                    
-
+ 
                  <!--   <td>
                       <a class="btn btn-sm btn-info text-white" (click) = update(item.idDemande)>
                         <i class="fa fa-pencil-square-o"  ></i></a>

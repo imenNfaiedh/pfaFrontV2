@@ -41,7 +41,7 @@ export const menu: CoreMenu[] = [
   {
     id: 'apps',
     type: 'section',
-    title: 'Apps & Pages',
+    title: 'Paramétrage',
     translate: 'MENU.APPS.SECTION',
     icon: 'package',
     children: [
@@ -50,26 +50,76 @@ export const menu: CoreMenu[] = [
         title: 'Partenaire',
       //  translate: 'MENU.APPS.EMAIL',
         type: 'item',
-        icon: 'mail',
+        icon: 'users',
         url: 'listpartenaire'
       },
       {
-        id: 'listfonds',
-        title: 'listfonds',
-       // translate: 'MENU.APPS.CHAT',
+        id: 'Fond',
+        title: 'Fond',
+        translate: 'MENU.APPS.CHAT',
         type: 'item',
-        icon: 'message-square',
+        icon: 'dollar-sign',
         url: 'listfonds'
       },
       {
-        id: 'todo',
-        title: 'Todo',
+        id: 'Modalité',
+        title: 'Modalité',
         translate: 'MENU.APPS.TODO',
         type: 'item',
-        icon: 'check-square',
-        url: 'apps/todo'
-      },
-      {
+        icon: 'credit-card',
+        url: 'listmodalite'
+      },]},
+
+
+
+       {
+        id: 'apps',
+        type: 'section',
+        title: 'Demande',
+        translate: 'MENU.APPS.SECTION',
+        icon: 'package',
+        children: [
+          {
+            id: 'Demande',
+            title: 'Demande',
+          //  translate: 'MENU.APPS.EMAIL',
+            type: 'item',
+            icon: 'archive',
+            url: 'listdemande'
+          },
+
+
+          
+        /* {
+            id: 'Fond',
+            title: 'Fond',
+            translate: 'MENU.APPS.CHAT',
+            type: 'item',
+            icon: 'dollar-sign',
+            url: 'listfonds'
+          },
+          {
+            id: 'Modalité',
+            title: 'Modalité',
+            translate: 'MENU.APPS.TODO',
+            type: 'item',
+            icon: 'credit-card',
+            url: 'listmodalite'
+          },*/
+          
+          
+          ]},
+
+      
+
+
+
+
+
+     
+    
+      
+     /* {
         id: 'calendar',
         title: 'Calendar',
         translate: 'MENU.APPS.CALENDAR',
@@ -1069,11 +1119,16 @@ export const menu: CoreMenu[] = [
       }
     ]
   },
+
+ 
+  
   // Charts & Maps
-  {
-    id: 'charts-maps',
+  /*{
+
+    
+    id: 'Demande',
     type: 'section',
-    title: 'Charts & Maps',
+    title: 'Demande',
     translate: 'MENU.CM.SECTION',
     icon: 'bar-chart-2',
     children: [
@@ -1118,7 +1173,7 @@ export const menu: CoreMenu[] = [
     ]
   },
   // Others
-  {
+ {
     id: 'others',
     type: 'section',
     title: 'Others',
@@ -1195,5 +1250,5 @@ export const menu: CoreMenu[] = [
         openInNewTab: true
       }
     ]
-  }
+  }*/
 ];
